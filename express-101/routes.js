@@ -4,9 +4,9 @@ const router = require("express").Router();
 const { welcomeMiddleware } = require("./middlewares/welcomeMiddleware");
 
 // controllers
-const { homeController } = require("./controllers/homeController");
-const { aboutController } = require("./controllers/aboutController");
-const { careerController } = require("./controllers/careerController");
+const { homeController } = require("./controllers/home/homeController");
+const { aboutController } = require("./controllers/about/aboutController");
+const { careerController } = require("./controllers/career/careerController");
 
 // routes
 router.get("/", welcomeMiddleware, homeController);
