@@ -1,8 +1,8 @@
 const mongoose = require("mongoose");
+require("dotenv").config();
 
 // Replace with your actual MongoDB password
-const uri =
-  "mongodb+srv://noman:mongodbpass@cluster0.3rmap.mongodb.net/Test?retryWrites=true&w=majority";
+const uri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0.3rmap.mongodb.net/Test?retryWrites=true&w=majority`;
 
 const clientOptions = {
   serverApi: { version: "1", strict: true, deprecationErrors: true },
